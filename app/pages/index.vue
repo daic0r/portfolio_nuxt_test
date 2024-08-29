@@ -28,6 +28,7 @@
             type: 'image/png',
             href: '/favicon.png'
          }
-      ]
+      ],
+      title: 'Home page'
    })
 </script>
