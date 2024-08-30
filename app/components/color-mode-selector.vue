@@ -7,6 +7,7 @@
 
 <script setup>
    const colorMode = useColorMode();
+   const showNextModeLabel = ref(false);
 
    const modes = [
       { name: 'system', icon: '🖥' },
