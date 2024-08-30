@@ -6,10 +6,20 @@ export default defineNuxtConfig({
      compatibilityVersion: 4,
   },
   modules: [
-     '@nuxtjs/tailwindcss',
-     '@nuxtjs/color-mode'
+    '@nuxtjs/tailwindcss',
+    '@nuxtjs/color-mode',
+    '@nuxt/content',
+    '@nuxt/image'
   ],
   colorMode: {
      classSuffix: ''
+  },
+  content: {
+     highlight: {
+        theme: {
+            default: 'min-light',
+            dark: 'min-dark'
+        }
+     }
   }
 })
