@@ -21,5 +21,8 @@ export default defineNuxtConfig({
             dark: 'min-dark'
         }
      }
+  },
+  app: {
+     pageTransition: { name: 'page', mode: 'out-in' }
   }
 })
