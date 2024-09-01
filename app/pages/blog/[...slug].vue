@@ -11,7 +11,7 @@
                      Table Of Contents
                   </div>
                   <nav>
-                     <TocLinks :links="doc.body.toc.links" />
+                     <TocLinks :links="doc.body.toc.links" :active-id="activeId" />
                   </nav>
                </aside>
             </div>
@@ -22,6 +22,29 @@
 </template>
 
 <script setup>
-   const route = useRoute();
-   console.log(route);
+   const activeId = ref(null);
+   onMounted(() => {
+      const callback = entries => {
+         for (const e of entries) {
+            console.log(e);
+         }
+         const entry = entries.find(e => e.isIntersecting);
+         activeId.value = entry?.target.id || activeId.value;
+      };
+      const observer = new IntersectionObserver(callback, {
+         root: null,
+         threshold: 0.5,
+      });
+      const elements = document.querySelectorAll('h2, h3');
+
+      for (const element of elements) {
+         observer.observe(element);
+      }
+      onBeforeUnmount(() => {
+         for (const element of elements) {
+            observer.unobserve(element);
+         }
+      });
+   });
+
 </script>
