@@ -20,7 +20,7 @@
 <script setup>
    const { data } = await useAsyncData(
       'posts', 
-      () => queryContent('/')
+      () => queryContent('/blog')
          .only(['title', '_path', 'publishedAt'])
          .where({ _path: { $ne: '/blog' } })
          .sort({ publishedAt: -1 })

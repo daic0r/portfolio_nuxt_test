@@ -14,6 +14,7 @@ head:
   - name: 'og:title'
     content: 'Im an OG'
 publishedAt: 2023-03-12 12:45:00
+toc: true
 ---
 # First post on our website
 ## Introduction 
