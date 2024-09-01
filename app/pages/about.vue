@@ -3,4 +3,3 @@
       <ContentDoc path="/about" />
    </article>
 </template>
-

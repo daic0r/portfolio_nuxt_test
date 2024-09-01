@@ -13,6 +13,7 @@ head:
     content: '© 2022 NuxtLabs'
   - name: 'og:title'
     content: 'Im an OG'
+publishedAt: 2023-03-12 12:45:00
 ---
 # First post on our website
 ## Introduction 
